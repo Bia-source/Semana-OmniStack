@@ -1,0 +1,36 @@
+PARA CRIAR UM PROJETO NODE:
+1º npm init -y
+2º npm install express
+3º criar um index.js
+------------------------------------------------
+4º Index.js
+
+       const express = require('express');
+
+       const app = express();
+
+         app.get('/', (request, response) => {
+          return response.send('Hello word')
+   
+
+        });
+
+        app.listen(3333);
+-----------------------------------------------
+
+para rodar o projeto node :
+node index.js
+
+---------------------------------------------------
+
+Instalando nodemon:
+npm install nodemon -D
+npm start
+
+---------------------------------------------------
+
+
+npx knex migrate:latest
+
+//para saber as tabelas que eu tenho no meu banco
+npx knex migrate:status   

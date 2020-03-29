@@ -1,0 +1,32 @@
+CRIANDO BANCO DE DADOS SQLITE :
+1º npm install knex *caso nao tenha o knex instalado no pc*
+2º npm install sqlite3
+------------------------------------------------------------
+
+CRIANDO CONEXÃO COM O BANCO:
+1º npx knex init
+2º configurar o bd
+
+----------------------------------------------------------
+ CRIANDO UMA TABELA 
+1º npx knex migrate:make create_nome
+2º
+criando uma tabela:
+ return knex.schema.createTable('ongs', function(table){
+      table.string('id').primary();
+      table.string('name').notNullable();
+      table.string('email').notNullable();
+      table.string('whatsapp').notNullable();
+      table.string('cidade').notNullable();
+      table.string('uf', 2).notNullable();
+      
+  });
+    deletando a tabela criada:
+    return knex.schema.dropTable('ongs');
+
+3º npx knex migrate:latest
+
+-----------------------------------------------------------
+CONSTRUINDO CORS
+
+1º npm install cors
